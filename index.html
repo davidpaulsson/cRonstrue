@@ -119,7 +119,7 @@ cronstrue.toString("23 12 * * SUN#2 ");
     $(document).ready(function(){
        $("#translate ").click(function(){
            var expression = $("#expression ").val();
-           var description = cronstrue.toString(expression);
+           var description = cronstrue.toString(expression, { throwExceptionOnParseError: false});
            $("#output ").text(description);
        });
     });
